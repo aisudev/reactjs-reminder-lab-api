@@ -15,12 +15,12 @@ GET http://localhost:5555/todo
 GET http://localhost:5555/todo/axcsasdasdkajhdkjasdjh
 
 ### 
-PUT  http://localhost:5555/todo/axcsasdasdkajhdkjasdjh
+PUT  http://localhost:5555/todo/213e23cc-a268-41bc-b78f-e1eba77c89cb
 Content-Type: application/json
 
 {
     "name":"abc",
-    "favorite":true,
+    "favorite":false,
     "progress":false
 }
 

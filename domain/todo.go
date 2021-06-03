@@ -10,8 +10,8 @@ type Todo struct {
 	ID       string         `gorm:"autoIncrement"`
 	UUID     string         `gorm:"primaryKey" json:"uuid"`
 	Name     string         `gorm:"varchar(50)" json:"name"`
-	Favorite bool           `gorm:"default:false" json:"favorite"`
-	Progress bool           `gorm:"default:false" json:"progress"`
+	Favorite *bool          `gorm:"default:false" json:"favorite"`
+	Progress *bool          `gorm:"default:false" json:"progress"`
 	CreateAt *time.Time     `gorm:"autoCreateTime" json:"-"`
 	DeleteAt gorm.DeletedAt `json:"-"`
 }
