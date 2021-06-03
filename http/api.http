@@ -1,0 +1,28 @@
+POST http://localhost:5555/todo
+Content-Type: application/json
+
+{
+    "uuid":"axcsasdasdkajhdkjasdjh",
+    "name":"xxx",
+    "favorite":false,
+    "progress":false
+}
+
+###
+GET http://localhost:5555/todo
+
+###
+GET http://localhost:5555/todo/axcsasdasdkajhdkjasdjh
+
+### 
+PUT  http://localhost:5555/todo/axcsasdasdkajhdkjasdjh
+Content-Type: application/json
+
+{
+    "name":"abc",
+    "favorite":true,
+    "progress":false
+}
+
+###
+DELETE http://localhost:5555/todo/axcsasdasdkajhdkjasdjh
