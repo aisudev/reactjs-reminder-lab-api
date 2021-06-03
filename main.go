@@ -4,7 +4,8 @@ import (
 	"fmt"
 	"reminder/domain"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
+	"github.com/labstack/echo/v4/middleware"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 
@@ -23,6 +24,8 @@ func init() {
 
 func main() {
 	e := echo.New()
+	e.Use(middleware.CORS())
+	e.Use(middleware.Recover())
 
 	group := e.Group("")
 

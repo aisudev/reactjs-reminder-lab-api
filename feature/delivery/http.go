@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"reminder/domain"
 
-	"github.com/labstack/echo"
+	"github.com/labstack/echo/v4"
 )
 
 type Handler struct {
@@ -40,7 +40,7 @@ func (h *Handler) Create(e echo.Context) error {
 		})
 	}
 
-	return e.JSON(http.StatusBadRequest, map[string]interface{}{
+	return e.JSON(http.StatusOK, map[string]interface{}{
 		"success": true,
 	})
 }
@@ -55,7 +55,7 @@ func (h *Handler) GetAll(e echo.Context) error {
 		})
 	}
 
-	return e.JSON(http.StatusBadRequest, map[string]interface{}{
+	return e.JSON(http.StatusOK, map[string]interface{}{
 		"success": true, "data": todo,
 	})
 
@@ -74,7 +74,7 @@ func (h *Handler) Get(e echo.Context) error {
 		})
 	}
 
-	return e.JSON(http.StatusBadRequest, map[string]interface{}{
+	return e.JSON(http.StatusOK, map[string]interface{}{
 		"success": true, "data": todo,
 	})
 
@@ -98,7 +98,7 @@ func (h *Handler) Update(e echo.Context) error {
 		})
 	}
 
-	return e.JSON(http.StatusBadRequest, map[string]interface{}{
+	return e.JSON(http.StatusOK, map[string]interface{}{
 		"success": true,
 	})
 
@@ -114,7 +114,7 @@ func (h *Handler) Delete(e echo.Context) error {
 		})
 	}
 
-	return e.JSON(http.StatusBadRequest, map[string]interface{}{
+	return e.JSON(http.StatusOK, map[string]interface{}{
 		"success": true,
 	})
 
